@@ -1,0 +1,46 @@
+img {
+    width: 100px;
+    height: auto;
+}
+
+.nav-wrapper {
+    display: flex;
+    gap: 128px;
+    align-items: center;
+}
+
+.nav-list {
+    list-style-type: none;
+    /* Removes the bullet points */
+    padding: 0;
+    /* Removes any default padding */
+    margin: 0;
+    /* Removes any default margin */
+    display: flex;
+    /* Makes the list items align horizontally */
+}
+
+.nav-item {
+    margin-right: 64px;
+    text-decoration: none;
+}
+
+.nav-item a {
+    text-decoration: none;
+    /* Removes the underline from nav links */
+    color: inherit;
+    /* Matches the color of surrounding text */
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.nav-item a.active {
+    /* Bold font for active link */
+    text-decoration: underline;
+    /* Change color for active link */
+}
+
+/* Optional: Remove the margin on the last item to avoid extra spacing */
+.nav-item:last-child {
+    margin-right: 0;
+}
