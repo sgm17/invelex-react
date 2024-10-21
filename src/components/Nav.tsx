@@ -30,7 +30,7 @@ function Nav() {
     ]
 
     return <div className="nav-wrapper">
-        <Link to={""}>
+        <Link to={"/"}>
             <img src={logo} alt="" />
         </Link>
         <ul className="nav-list">
