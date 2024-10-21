@@ -1,3 +1,175 @@
 .home-wrapper {
     padding: 20px;
 }
+
+.home-header {
+    margin-top: 75px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.latest-wrapper {
+    margin-top: 32px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.latest-sign {
+    border-radius: 8px;
+    background-color: rgba(170, 154, 64, 0.06);
+    padding: 10px;
+    font-size: 20 px;
+}
+
+.latest-link {
+    color: #808080;
+    font-size: 20px;
+}
+
+.latest-link>a {
+    text-decoration: none;
+    color: inherit
+}
+
+.bibliography-text {
+    margin-top: 32px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.home-title {
+    margin-top: 60px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.projects-grid {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-item {
+    display: flex;
+    border: 1px solid #3D3D3D;
+    border-radius: 10px;
+    height: 361px;
+    width: auto;
+    justify-content: space-between;
+    align-items: end;
+    padding: 20px 20px 0 20px;
+}
+
+.project-item>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+}
+
+.project-item>ul>li {
+    margin-bottom: 13px;
+    font-size: 24px;
+}
+
+.project-item>ul>li:last-child {
+    margin-bottom: 0;
+}
+
+.project-item>ul>li:first-child {
+    font-weight: 600;
+}
+
+.mockup-container,
+.iphone-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.mockup-container img {
+    object-fit: cover;
+    width: 338px;
+    margin-left: 12px;
+    margin-top: 9px;
+    border-radius: 30px 30px 0 0;
+}
+
+.iphone-container img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.screenshot-container {
+    position: relative;
+    width: 361px;
+    height: 361px;
+    overflow: hidden;
+}
+
+.team-grid {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.member-element {
+    position: relative;
+    height: 533px;
+    width: auto;
+    overflow: hidden;
+}
+
+.member-element img {
+    height: auto;
+    width: 100%;
+    display: block;
+}
+
+.member-element ul {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    text-align: center;
+    font-size: 26px;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.member-element ul li:first-child {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.member-element::after {
+    content: '';
+    /* Necessary for pseudo-elements */
+    position: absolute;
+    /* Absolutely position it within the member-element */
+    top: 0;
+    /* Cover from the top */
+    left: 0;
+    /* Cover from the left */
+    right: 0;
+    /* Cover to the right */
+    bottom: 0;
+    /* Cover to the bottom */
+    background-color: rgba(255, 255, 255, 0.3);
+    /* White with 50% transparency */
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s ease;
+    /* Smooth transition for the opacity */
+}
+
+.member-element:hover::after {
+    opacity: 1;
+    /* Show the overlay on hover */
+}
