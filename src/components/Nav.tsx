@@ -4,8 +4,7 @@ import logo from "../assets/logo.png"
 
 interface NavItem {
     name: string,
-    endpoint: string,
-    active: Boolean
+    endpoint: string
 }
 
 function Nav() {
@@ -14,23 +13,19 @@ function Nav() {
     const navigationItems: NavItem[] = [
         {
             name: "Projects",
-            endpoint: '/#projects',
-            active: false
+            endpoint: '/#projects'
         },
         {
             name: "Team",
-            endpoint: '/#team',
-            active: false
+            endpoint: '/#team'
         },
         {
             name: "Blog",
-            endpoint: '/blog',
-            active: true
+            endpoint: '/blog'
         },
         {
             name: "Podcasts",
-            endpoint: '/podcasts',
-            active: true
+            endpoint: '/podcasts'
         }
     ]
 
@@ -42,7 +37,7 @@ function Nav() {
             {navigationItems.map((e, index) => (
                 <li className="nav-item" key={index}>
                     <Link
-                        className={e.active && location.pathname.includes(e.endpoint) ? 'active' : ''}
+                        className={location.pathname.includes(e.endpoint) ? 'active' : ''}
                         to={e.endpoint}>{e.name}</Link>
                 </li>
             ))}
