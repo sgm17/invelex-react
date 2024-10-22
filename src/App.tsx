@@ -4,6 +4,7 @@ import Blog from './pages/blog/Blog';
 import Podcasts from './pages/podcasts/Podcasts';
 import Post from './pages/post/Post';
 import Podcast from './pages/podcast/Podcast';
+import Project from './pages/project/Project';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/:slug" element={<Project />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<Post />} />
           <Route path="/podcasts" element={<Podcasts />} />

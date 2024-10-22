@@ -7,6 +7,7 @@ import ScreenshotMockup from "../../assets/home.png"
 import MemberImage from "../../assets/team.png"
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { projectsData } from "./projects-data"
 
 
 function Home() {
@@ -46,66 +47,23 @@ function Home() {
             Projects
         </div>
         <div className="projects-grid">
-            <div className="project-item">
-                <ul>
-                    <li>SOCIALICE</li>
-                    <li>1M Users</li>
-                    <li>0$/month</li>
-                </ul>
-                <div className="screenshot-container">
-                    <div className="mockup-container">
-                        <img src={ScreenshotMockup} alt=""></img>
-                    </div>
-                    <div className="iphone-container">
-                        <img src={IphoneMockup} alt=""></img>
-                    </div>
-                </div>
-            </div>
-            <div className="project-item">
-                <ul>
-                    <li>SOCIALICE</li>
-                    <li>1M Users</li>
-                    <li>0$/month</li>
-                </ul>
-                <div className="screenshot-container">
-                    <div className="mockup-container">
-                        <img src={ScreenshotMockup} alt=""></img>
-                    </div>
-                    <div className="iphone-container">
-                        <img src={IphoneMockup} alt=""></img>
+            {projectsData.map((e) => <Link to={e.slug}>
+                <div className="project-item">
+                    <ul>
+                        <li>{e.name.toUpperCase()}</li>
+                        <li>{e.users} Users</li>
+                        <li>{e.revenue}$/month</li>
+                    </ul>
+                    <div className="screenshot-container">
+                        <div className="mockup-container">
+                            <img src={ScreenshotMockup} alt=""></img>
+                        </div>
+                        <div className="iphone-container">
+                            <img src={IphoneMockup} alt=""></img>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="project-item">
-                <ul>
-                    <li>SOCIALICE</li>
-                    <li>1M Users</li>
-                    <li>0$/month</li>
-                </ul>
-                <div className="screenshot-container">
-                    <div className="mockup-container">
-                        <img src={ScreenshotMockup} alt=""></img>
-                    </div>
-                    <div className="iphone-container">
-                        <img src={IphoneMockup} alt=""></img>
-                    </div>
-                </div>
-            </div>
-            <div className="project-item">
-                <ul>
-                    <li>SOCIALICE</li>
-                    <li>1M Users</li>
-                    <li>0$/month</li>
-                </ul>
-                <div className="screenshot-container">
-                    <div className="mockup-container">
-                        <img src={ScreenshotMockup} alt=""></img>
-                    </div>
-                    <div className="iphone-container">
-                        <img src={IphoneMockup} alt=""></img>
-                    </div>
-                </div>
-            </div>
+            </Link>)}
         </div>
         <div className="home-title" id="team">
             Team
