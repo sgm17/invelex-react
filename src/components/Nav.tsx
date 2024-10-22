@@ -37,7 +37,7 @@ function Nav() {
             {navigationItems.map((e, index) => (
                 <li className="nav-item" key={index}>
                     <Link
-                        className={location.pathname.includes(e.endpoint) ? 'active' : ''}
+                        className={location.pathname.includes(e.endpoint) || location.hash.includes(e.endpoint.substring(1)) ? 'active' : ''}
                         to={e.endpoint}>{e.name}</Link>
                 </li>
             ))}
