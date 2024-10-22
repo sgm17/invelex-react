@@ -14,12 +14,12 @@ function Nav() {
     const navigationItems: NavItem[] = [
         {
             name: "Projects",
-            endpoint: '#projects',
+            endpoint: '/#projects',
             active: false
         },
         {
             name: "Team",
-            endpoint: '#team',
+            endpoint: '/#team',
             active: false
         },
         {
@@ -42,7 +42,7 @@ function Nav() {
             {navigationItems.map((e, index) => (
                 <li className="nav-item" key={index}>
                     <Link
-                        className={e.active && location.pathname === e.endpoint ? 'active' : ''}
+                        className={e.active && location.pathname.includes(e.endpoint) ? 'active' : ''}
                         to={e.endpoint}>{e.name}</Link>
                 </li>
             ))}

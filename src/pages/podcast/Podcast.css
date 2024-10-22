@@ -1,0 +1,90 @@
+.podcast-wrapper {
+    padding: 20px;
+}
+
+.podcast-title {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.podcast-date {
+    color: #808080;
+    font-size: 20px;
+    margin-top: 64px;
+}
+
+.podcast-columns {
+    display: flex;
+    margin-top: 16px;
+    gap: 64px;
+}
+
+.podcast-columns>* {
+    flex: 1;
+}
+
+.video-container {
+    position: relative;
+    border: 1px solid #3D3D3D;
+    height: 326.5px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.video-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.podcast-data-column {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    /* Add the border-radius to the iframe as well */
+}
+
+.podcast-description {
+    font-size: 20px;
+    color: #808080;
+    text-align: justify;
+}
+
+.podcast-participants {
+    font-size: 20px;
+    color: #808080;
+    text-align: left;
+}
+
+.podcast-return-button {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 32px;
+    max-width: 200px;
+    /* The button will not exceed this width */
+    width: auto;
+    /* Button width adjusts to the content */
+    text-align: center;
+    /* Ensure the text inside is centered */
+}
+
+.podcast-data-column a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.podcast-return-text {
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+}

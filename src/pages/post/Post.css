@@ -1,0 +1,34 @@
+.post-wrapper {
+    padding: 20px;
+}
+
+.post-title {
+    margin-top: 75px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.post-subheader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.post-creation-date,
+.post-views {
+    color: #808080;
+    font-size: 20px;
+}
+
+.post-image {
+    padding-top: 32px;
+    height: 600px;
+    width: 100%;
+}
+
+.post-image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}

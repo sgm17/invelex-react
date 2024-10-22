@@ -132,6 +132,13 @@ function Home() {
                     <li>Software Developer</li>
                 </ul>
             </div>
+            <div className="member-element">
+                <img src={MemberImage} alt="" />
+                <ul>
+                    <li>Sergi Garcia</li>
+                    <li>Software Developer</li>
+                </ul>
+            </div>
         </div>
         <Footer />
     </div>

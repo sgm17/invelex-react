@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import Home from './pages/home/Home';
 import Blog from './pages/blog/Blog';
 import Podcasts from './pages/podcasts/Podcasts';
+import Post from './pages/post/Post';
+import Podcast from './pages/podcast/Podcast';
 
 function App() {
   return (
@@ -10,7 +12,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<Post />} />
           <Route path="/podcasts" element={<Podcasts />} />
+          <Route path="/podcasts/:slug" element={<Podcast />} />
           <Route
             path="*"
             element={<Navigate to="/" replace={true} />}

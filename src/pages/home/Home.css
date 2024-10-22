@@ -60,6 +60,7 @@
     justify-content: space-between;
     align-items: end;
     padding: 20px 20px 0 20px;
+    cursor: pointer;
 }
 
 .project-item>ul {
@@ -113,26 +114,28 @@
 .team-grid {
     margin-top: 32px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
 .member-element {
     position: relative;
-    height: 533px;
+    height: 400px;
     width: auto;
     overflow: hidden;
 }
 
 .member-element img {
-    height: auto;
+    object-fit: cover;
+    height: 400px;
     width: 100%;
     display: block;
+
 }
 
 .member-element ul {
     position: absolute;
-    bottom: 50px;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     list-style: none;
