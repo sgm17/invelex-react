@@ -27,10 +27,10 @@ function Podcasts() {
         </div>
         <div className="podcasts-grid">
             {podcastItems.map((e, index) =>
-                <div className="podcast-item" key={index}>
-                    <Link to={e.slug}>
+                <Link to={e.slug}>
+                    <div className="podcast-item" key={index}>
                         <img src={e.image} alt="" />
-                        <div className="podcast-text">
+                        <div className="podcast-content">
                             <div className="podcast-title">
                                 {e.title}
                             </div>
@@ -38,8 +38,8 @@ function Podcasts() {
                                 {formatDate(e.createdAt)}
                             </div>
                         </div>
-                    </Link>
-                </div>
+                    </div>
+                </Link>
             )
             }
         </div>
