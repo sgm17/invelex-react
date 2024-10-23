@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom"
 import Footer from "../../components/Footer"
 import Nav from "../../components/Nav"
-import "./Home.css"
 import IphoneMockup from "../../assets/iphone_mockup.png"
 import ScreenshotMockup from "../../assets/home.png"
 import MemberImage from "../../assets/team.png"
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { projectsData } from "./projects-data"
+import "./Home.css"
 
 
 function Home() {
