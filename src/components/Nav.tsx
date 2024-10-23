@@ -29,6 +29,8 @@ function Nav() {
         }
     ]
 
+    console.log(location.pathname.split("/"))
+
     return <div className="nav-wrapper">
         <Link to={"/"}>
             <img src={logo} alt="" />
@@ -37,7 +39,7 @@ function Nav() {
             {navigationItems.map((e, index) => (
                 <li className="nav-item" key={index}>
                     <Link
-                        className={location.pathname.includes(e.endpoint) || location.hash.includes(e.endpoint.substring(1)) ? 'active' : ''}
+                        className={location.pathname.split("/").includes(e.endpoint.replace("/", "").replace("#", "")) || location.hash.includes(e.endpoint.substring(1)) ? 'active' : ''}
                         to={e.endpoint}>{e.name}</Link>
                 </li>
             ))}

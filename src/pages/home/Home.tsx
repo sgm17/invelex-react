@@ -47,7 +47,7 @@ function Home() {
             Projects
         </div>
         <div className="projects-grid">
-            {projectsData.map((e) => <Link to={e.slug}>
+            {projectsData.map((e, index) => <Link to={`projects/${e.slug}`} key={index}>
                 <div className="project-item">
                     <ul>
                         <li>{e.name.toUpperCase()}</li>

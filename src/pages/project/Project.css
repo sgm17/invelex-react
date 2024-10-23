@@ -1,3 +1,42 @@
 .project-wrapper {
     padding: 20px;
 }
+
+.project-title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 64px;
+}
+
+.project-stores {
+    display: flex;
+    gap: 32px;
+}
+
+.project-stores a img {
+    height: 30px;
+    width: auto;
+}
+
+.project-stores a img:nth-child(2) {
+    height: 60px;
+    width: auto;
+}
+
+.project-date {
+    margin-top: 32px;
+    color: #808080;
+    font-size: 18px;
+}
+
+.project-description {
+    margin-top: 32px;
+    font-size: 20px;
+    text-align: justify;
+}

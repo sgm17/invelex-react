@@ -27,8 +27,8 @@ function Podcasts() {
         </div>
         <div className="podcasts-grid">
             {podcastItems.map((e, index) =>
-                <Link to={e.slug}>
-                    <div className="podcast-item" key={index}>
+                <Link to={e.slug} key={index}>
+                    <div className="podcast-item">
                         <img src={e.image} alt="" />
                         <div className="podcast-content">
                             <div className="podcast-title">
